@@ -1,0 +1,155 @@
+/*selectores*/
+/*universal*/
+*{
+    background-color: aliceblue;
+}
+
+/*de etiqueta*/
+
+body{
+    background-color: antiquewhite;
+}
+
+/*de etiqueta para varios*/
+h1,h2{
+    color: black;/*color de la fuente*/
+    font-size: 50px;
+}
+
+/*para una etiqueta en especifico qu eets dentrod e otras*/
+p a{/*busc el enlace dentro del parrafo y le cambia el color*/
+    color: blue;
+}
+
+/*selectores de clase*/
+.main{
+    font-size: 30px;
+}
+
+/*selectores de id*/
+#emails {
+    color: brown;
+}
+
+/*selector para href*/
+a[href="mailto:jdperezdu@ufpso.edu.co"]{
+    color: rgb(56, 47, 180);
+}
+
+/*unidades de medida*/
+/*px es la mas comun
+em : 1em toma el valor del tamaño fuente original, si lo defini como 16px , ues 1em : 16px, 2em:32px
+% : es para ajustar algo a un cierto porcentaje de su padre
+el padre es la etiqueta que contiene otro*/
+
+ul{
+    background-color: azure;
+    width: 50%;/*en este caso ul toma la mitad del tamaño de su padre que en estaso es el main y main es hijo del body*/
+}
+
+/*uniddades de color*/
+/*se puede usar un codigo de colores de una pagina de google, llamada codigo de colores para html */
+
+section{
+    background-color: rgb(131, 111, 107);/*esta es una forma de poner colores especificos, lo cual no ayudara mucho a nuestra pagina*/
+    color: rgb(rgba(255, 0, 0, 0.699), green, blue);/*oiga hay una forma mas facil de modificar un color, u sted pone el cursor sobre el cuadritoq ue aparece del color y ahi lo modifica*/
+}
+
+/*modelo de caja */
+/*elementos en linea: son loque estan un bloque solo tiene su tamaño y no ocupa el 100% de l ancho de la pagina, a estos no se les puede modificar
+ni el ancho ni el alto
+elementos en bloque: contraio a lo anterior*/
+
+div{
+    width: 500px;/*ancho*/
+    height: 500px;/*alto, este no es tan necesaaria por al cambiarel ancho se ajusta el alto*/
+    background-color: rgb(96, 96, 156);
+    margin: 30%;/*este es el magen tre el bloque y el espcaio exterior si le pongo dos valores
+    uno es de arriba y abajo y el otro de los lados*/
+    padding: 20% 30%;/*espacio entre el borde del bloque y el contenido interno*/
+    border: 30% solid 75% ;/*este es el borde obvio. el solid es un horillo negro hay diferentes tipos para que el borde salga con puntitos y asi*/
+    /*el bloque se agranda a un mas por el padding y el margin en caso de que ya se cambio el width y el height para tener en cuenta*/
+    display: inline-block;/*sirve para forzar un bloque a que sea linea y asi ponerlo uno al lado del otro*/
+}
+
+/*fondos*/
+
+div{
+    background: url();/*para poner de fondo una imagen*/
+    background-repeat: no-repeat;/*para qeu el fondo no se repita varias veces*/
+    background-attachment: fixed;/*pa que el fondo no se mueva con el texto, */
+}
+
+/*posicionamiento de cajas*/
+
+div{
+    position: relative;
+    top:3px ;
+    bottom:3px ;
+    right: 3px;
+    left:3px ;
+    /*todo lo anterios es para mover la caja*/
+}
+/*si creas un elemento padre con posicion relative y el hijo con absolute se puede posicinar el elemento hijo dentrod el absolute
+sis e usa fixed como posicionamiento, deja la caja estatica mientras lo de atras si se mueve, epro obvio se puede posicionar*/
+div{
+    position: relative;
+    top:10px ;
+    bottom:30px ;
+    right:40px ;
+    left: 45px;
+    float: left;/*mueve las cajas hacia un lado una tras otra quedando enfila asi xxxxx*/
+    /*todo lo anterios es para mover la caja*/
+}
+
+/*imagenes*/
+/*si quiero poner el texto al lado de una imagen usamos el float*/
+img{
+    float: left;
+}
+
+p{
+    float: left;
+}
+/*si se quiere que una paret del texto no lo haga, ps se usa una clse para ese texto*/
+.main{
+    float: both;/*esto hace que este parrafo en especifico no se mueva a la izquierda de la imagen*/
+}
+
+/*flex */
+/*para usar flex se tiene que tener un contenedor que es como uan etiqueta con una clase que tiene intenerna otros contenedores o cajas
+entonces para aaplicar lo del flex se pone con display en la etiqueta padre del contenedor asi:*/
+/*flex sirve para organizar las cajas dentro de un espacio o contenedor especifico*/
+/*asi que modifico las medidas del contenedor principal, las cjas se acomodan al espacio que tienen*/
+.contenedor_padre{
+    display: flex;/*toma las cajas y las acomoda en una fila */
+    flex-flow: wrap;/*toma las cajas contenidas aqui y las acomoda en una fila y columnas si es necesario paar mostrar toda la informacion */
+    flex-flow: nowrap;/*cada uno de los elementos ocupa la fila solamente respetando el espacio que peueda ocupar*/
+    flex-flow: wrap-reverse;/*se revierte el orden en que esta cada uno de los elementos*/
+    flex-flow: column wrap-reverse;/*nos permite indicar si es una columna o fila  y la forma en que se ordenan los datos o cajas*/
+    height: 30%;
+    /*como alinear las cjas del contenedor*/
+    justify-content: center;
+    align-items: stretch;/*hace que cada item ocupe todo el espacio del contenedor qu elos tiene*/
+}
+
+/*grid*/
+/*este es lo mismo que el anterior tambien es para movr los elementos de un contenedor, solo que este maneja filas y columnas */
+.contenedor{
+    display: grid;/*ahi se agrega el grid que acomoda todo en columna y asi */
+    grid-template-columns: repeat(3 1fr) ;/*nos ayuda a definir colmumnas, cada 1fr es una columna yb el 3 es el numero de columnas*/
+    grid-template-rows: repeat(3 1fr);/*es lo mismo que en loa nterior solo que aqui creamos filas */
+    /*de esta maenra podemos tener un contenedor con 3 filas y 3 columnas como uan cuadricula y grcioas a eso podemos modificar el espacio de cada hijo
+    dentro de este contenedor utilizando que columnas y que finlas va a ocupar cada elementeo, eprop eso 
+    se hace en cada hijo especifico*/
+}
+
+.element{
+    grid-column: 1/3;/*eto quiere decir que n el primera columna hast la 3 columna columnas, cada numero es la primera linea del cuadroq eus e forma, como si fuera cada
+    borde y yo decidiera de que borde a que borden va ya sea en cuestion de filas o columnas*/
+    grid-row: 1/3;/*esto para las filas*/
+}
+
+/*para ver la cuadricula que se forma con grid, hay que darle inspeccionar a la pagina y en layaout
+nos ubicamos en la grid que aparce con el nombnre del contennedor y se le da ver y se le pone el color en negropa que e vea bien*/
+

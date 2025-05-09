@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--dentro esta toda la página-->
+<html lang="es"><!--defino el idioma de la página -->
+    <!--la paginas manejan estructuras semanticas como:-->
+    <head>
+        <!--donde estan los metadatos y se linkea los stylos para la pagina-->
+        <link rel="stylesheet" href=""><!--para enlazar el css-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--link favicon nos sirve para ponerle un logo en la pestañita de la pagina, en href se pone la dirrecion donde se encuentra el logo imagenes/logo.ico-->
+        <meta name="description" content="agregamos una descripcion no muy larga de nuestra pagina"><!--para que google la posicione o la muetre cuando se hag una busqueda relacionada-->
+        <meta name="keywords" content="agregamos palabras claves eparadas por coma"><!--ayuda a encontrar nuestro sitio-->
+    </head>
+
+    <body><!--aqui va todo el cuerpo de la pagina-->
+
+        <!--dentro del body se definen tres etiquetas de estructura o semanticas como lo son :-->
+        <header>
+            <!--el encabezado de la pagina -->
+            <h1><!--sirve par los titulos y subtitulos--></h1>
+            <nav><!--etiquea de navegacion o busqueta y asi --></nav>
+
+            <!--en esta parte tambien podrian ir un logo, una imagen, una frase, asl que idenutiofique a la pagina -->
+
+        </header>
+
+        <main>
+            <!--la parte del contenido de la pagina y toda la informacion principal-->
+            <!--el contenido se estructura en todas etiquetas para que google encuentre el contenido -->
+            <!--recordar tambien que todo esto puede irde una forma organizada usando etiquetas-->
+            <section></section>
+            <!--como debe ir una seccion de articulos-->
+            <section class="wrapper"><!--wrapper aqui es como un contenedor de secciones-->
+                <section class="main"></section><!--cotendido principal-->
+                <article><!--el articulo -->
+                    <h2><!--encabezado de ese articulo--></h2>
+                    <p></p>
+                </article>
+                <aside></aside><!--para el contenido que no es importante o que no es muy relevante-->
+            </section>
+            <article></article>
+            <aside></aside>
+            <div></div><!--es solo paar separar algo y ya, normalmente ahi se pone lo que es la imagenes y asi -->
+            <figure></figure>
+            <nav></nav><!--indica que lop que etsa adentro es de navegacion-->
+
+            <!--a continuacio etiquetas que normamlmente se usan dentro de las antes mencionadas-->
+
+            <!--etiquetas para texto y su funcionalidad-->
+            <p><!--sirven para los parrafos--></p>
+            <br><!--para saltos de linea y asi-->
+            <b><!--si se quiere algo en negrilla--></b>
+            <strong><!--pone en negrilla y hace enfasisi al navegador de que es importante--></strong>
+            <span><!--sirve para marcar y aislar una parte específica de un texto o contenido en línea, permitiendo aplicar estilos o agregar atributos sin crear una nueva línea.--></span>
+            <i><!--letra cursiva--></i>
+            <blockquote><!--para hacer citas--></blockquote>
+            <cite><!--para agregar los que es el nombre del autor o datos de la cita--></cite>
+            <hr><!--linea de separacion-->
+            <h2><!--subtitulos y asi--></h2>
+
+            <!--enlaces-->
+            <a target="" href=""><!--enlaces o links --></a><!--dentro del atributo va el enlace hacia donde se dirige al dar clic o na ruta relativa como las de git para ubicar una carpeta-->
+            <!--target="_blank"es para que el enlace se abra en ua pagina diferente -->
+            <a href="mailto:jdperezdu@ufpso.edu.co" title="enviar a jesus david">enviar email</a><!--enviar un email a uan direccion especifica-->
+            <!--el atributo title nos permite que aparezca un mensajito que diga a que se va enviar o que hace dicho enlace-->
+
+            <!--listas-->
+            <!--podemos usar las listas para ls enlaces ya asi-->
+            <ul><!--define la lista szin orden numerico ni alfa-->
+                <li><!--cada uno de sus items--></li>
+                <li><!--otro item--></li>
+            </ul>
+
+            <ol><!--listas ordenadas-->
+                <li><!--para los items--></li>
+            </ol>
+
+            <!--imagenes-->
+            <img src="" alt="" height="" width=""><!--etiqueta para las imagenes, en src se pone el enlace o la direccion en la que esta la imagen, w y h son para ancho y alto, alt se usa para mostrar un texto si el navegador no encontro la imagen -->
+
+            <!--tablas-->
+            <table><!--hace la tabla-->
+                <th><!--fila de encabezados--></th>
+                <tr><!--crea una fila-->
+                    <td><!--es una celda de esa fila--></td>
+                </tr>
+            </table>
+
+            <!--formularios-->
+
+            <form action="" method=""><!--para hacer formularios y asi--><!--recordar que para hacer formularios se usan otras etiquetas,a si que investigalas please-->
+            <!--action recibe una url que se encarga de procesar los datos que se procesan -->
+            <!--method es porque metodo se va enviar los datos-->
+                <label for="el id del input si es que se le hizo uno"></label><!--para el nombre de la entrada-->
+                <input type="text" placeholder="mostrar algo en el campo de entrada que indique que se debe ingresar" maxlength="maximo de caracteres, un numero ">
+                <!--entrada de datos para el formulario, type, tipo de data, si es texto o numeros, value sirve para mosarrle al usario que ingresar en la entrada -->
+                <input type="password"><!--muestra los puntitos para que no se vea la contraseña -->
+                <input type="email" name="" id="emails"><!--comprueba que un email sea correcto-->
+                <input type="checkbox"><!--seleccionar si o no en un cuadrito o algo asi-->
+                <input type="radio"><!--seleccionar entre dos valores, igual que el anterior-->
+                <input type="button"><!--es un botom, como elñ de enviar o algo asi, obio hay que ponerle otros atributos y nombre con value, este es solo un boton-->
+                <input type="submit"><!--este es un botom que si envia los datos -->
+                <select name="" id=""><!--lista de opciones-->
+                    <option value=""></option><!--cada una de las opciones desplegables,s e usa para elegir fechas, meses, años y asi-->
+                </select>
+                <input type="color"><!--se puede prgeuntar un color--->
+                <!--se puede sar range para hacer una eleccionde elegir el rangoa si como en plantas versus zombies-->
+            </form>
+        </main>
+
+        <footer>
+            <!--pie de pagina e informacion alterna como nombres de autor y fechas-->
+        </footer>
+        
+    </body>
+
+</html>
