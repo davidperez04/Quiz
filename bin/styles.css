@@ -1,0 +1,13 @@
+header{
+    background: url(ima.png);
+    background-size: cover;/*hace que la imagen cubra tod ala pantalla*/
+}
+.header-container{
+
+    display: grid;
+    
+}
+
+.logo{
+    height: 300px;
+}
