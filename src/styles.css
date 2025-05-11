@@ -1,3 +1,6 @@
+/* ====================== */
+/* ESTILOS GENERALES */
+/* ====================== */
 body {
     background-color: rgb(85, 27, 139);
     background-size: cover;
@@ -5,6 +8,9 @@ body {
     padding-top: 10px;
 }
 
+/* ====================== */
+/* HEADER - LOGO Y NAVEGACIÓN */
+/* ====================== */
 header {
     background-image: url('ima2.png');
     background-size: cover;
@@ -43,6 +49,9 @@ h1 {
     padding: 0;
 }
 
+/* ====================== */
+/* BARRA DE NAVEGACIÓN */
+/* ====================== */
 nav {
     background-color: rgb(179, 15, 70);
     width: 100%;
@@ -82,6 +91,9 @@ nav {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* ====================== */
+/* CONTENIDO PRINCIPAL */
+/* ====================== */
 main {
     padding: 20px;
 }
@@ -95,6 +107,9 @@ main section:last-child {
     margin-bottom: 0;
 }
 
+/* ====================== */
+/* SECCIÓN INICIO */
+/* ====================== */
 #inicio img {
     max-width: 80%;
     height: auto;
@@ -112,21 +127,23 @@ main section:last-child {
     line-height: 1.6;
 }
 
-#sinopsis h2,
-#personajes h2,
-#galeria h2 {
+/* ====================== */
+/* SECCIÓN SINOPSIS */
+/* ====================== */
+#sinopsis h2 {
     font-size: 1.8em;
     color: white;
     margin-bottom: 15px;
 }
 
-#sinopsis p,
-#personajes p,
-#galeria p {
+#sinopsis p {
     color: white;
     line-height: 1.6;
 }
 
+/* ====================== */
+/* SECCIÓN PERSONAJES - USO DE CSS GRID */
+/* ====================== */
 #personajes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -154,7 +171,9 @@ main section:last-child {
     margin-top: 5px;
 }
 
-/* Estilos para la galería */
+/* ====================== */
+/* SECCIÓN GALERÍA - EFECTOS HOVER */
+/* ====================== */
 #galeria {
     padding: 20px;
     margin-bottom: 50px;
@@ -199,18 +218,9 @@ main section:last-child {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    .contenedor-galeria {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .contenedor-galeria {
-        grid-template-columns: 1fr;
-    }
-}
-/* Estilos para el formulario de contacto */
+/* ====================== */
+/* SECCIÓN CONTACTO - FORMULARIO */
+/* ====================== */
 #contacto {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 30px;
@@ -275,7 +285,32 @@ main section:last-child {
     background-color: #c11a1f;
 }
 
-/* Responsive para el formulario */
+/* ====================== */
+/* FOOTER */
+/* ====================== */
+footer {
+    color: white;
+}
+
+.instagram {
+    color: bisque;
+}
+
+/* ====================== */
+/* DISEÑO RESPONSIVE */
+/* ====================== */
+@media (max-width: 768px) {
+    .contenedor-galeria {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 600px) {
     #contacto {
         padding: 20px;
